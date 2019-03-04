@@ -1,0 +1,83 @@
+/* N O T E S */
+
+.note1 { grid-area: note1; }
+.note2 { grid-area: note2; }
+.note3 { grid-area: note3; }
+.note4 { grid-area: note4; }
+.note5 { grid-area: note5; }
+.note6 { grid-area: note6; }
+.note7 { grid-area: note7; }
+.note8 { grid-area: note8; }
+.note9 { grid-area: note9; }
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-areas: 'note1' 'note2' 'note3' 'note4' 'note5' 'note6' 'note7' 'note8' 'note9';
+  	padding: 3%;
+}
+
+.grid-container > div {
+	padding: 10px;
+	margin: 5px;
+	border-radius: 10px;
+	border:1px solid rgb(221, 221, 221);
+}
+
+section div div {
+	display: flex;
+	flex-direction: column;
+    justify-content: space-between;
+}
+
+section div div:hover > div {
+	visibility: visible;
+}
+
+.note-options{
+	display: flex;
+    flex-flow: row nowrap;
+	justify-content: space-between;
+	visibility: hidden;
+}
+
+.ekis {
+	position: absolute;
+	
+}
+
+
+@media screen and (min-width: 700px) {
+	.grid-container {
+	
+		grid-template-columns: 33% 33% 33%;
+		grid-template-areas:
+			'note1 note2 note3'
+			'note4 note2 note3'
+			'note5 note7 note3'
+	  		'note5 note8 note6'
+			'note5 note8 note6'
+			'note9 . .'
+			'note9 . .'
+		;
+	}
+}
+
+
+@media screen and (min-width: 900px) {
+
+	.grid-container {
+	
+		grid-template-columns: 25% 25% 25% 25%;
+		grid-template-areas:
+			'note1 note2 note3 note4'
+			'note5 note2 note3 note7 '
+			'note5 note8 note3 note9 '
+	  		'note5 note8 note6 note9'
+	  		'. . note6 .'
+		;
+
+		padding-top: 0;
+    }
+    
+}
